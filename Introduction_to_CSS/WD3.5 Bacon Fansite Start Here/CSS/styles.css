@@ -3,17 +3,39 @@ h1 {
   color: red;
   font-size: 200px;
 }
-/*  
-
+/*
 img {
-  background-color: red;
+    background-color: red;
+}
+
+img:hover {
+  background-color: gold;
+  border-radius: 100%;
 }
 */
 /****************** Class Selectors **************/
 
 .bacon {
+  background-color: grey;
+}
+img.bacon:hover {
   background-color: green;
 }
+
 .avocado {
+  background-color: grey;
+}
+
+img.avocado:hover {
   background-color: red;
+}
+
+.rounded {
+  border-radius: 20%;
+}
+
+/****************** ID Selectors **************/
+
+#heading {
+  color: blue;
 }
