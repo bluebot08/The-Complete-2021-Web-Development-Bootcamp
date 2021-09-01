@@ -45,3 +45,8 @@ a {
   left: 300px;
   bottom: 300px;
 }
+
+.skill-row{
+  margin: 100px auto 100px auto;
+  width: 50%;
+}
