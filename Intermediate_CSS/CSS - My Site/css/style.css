@@ -58,6 +58,9 @@ a {
   width: 25%;
   margin-right: 30px;
 }
+.game-development-img {
+  clear: right;
+}
 .gameimg {
   float: right;
   width: 25%;
