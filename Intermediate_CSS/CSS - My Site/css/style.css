@@ -54,8 +54,12 @@ a {
 }
 
 .codeimg {
+  float: left;
   width: 25%;
+  margin-right: 30px;
 }
 .gameimg {
+  float: right;
   width: 25%;
+  margin-left: 30px;
 }
