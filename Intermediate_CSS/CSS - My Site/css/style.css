@@ -47,6 +47,8 @@ a {
 }
 
 .skill-row{
+  line-height: 2;
   margin: 100px auto 100px auto;
+  text-align: left;
   width: 50%;
 }
