@@ -27,6 +27,7 @@ a {
   text-decoration: none;
 }
 a:hover {
+  color: #eaf6f6;
 }
 hr {
   border-style: dotted none none none;
@@ -38,10 +39,9 @@ hr {
 p {
   line-height: 2;
 }
-.contact-me {
-}
 .copyrighttxt {
   color: #eaf6f6;
+  font: 0.75em;
 }
 .top-container {
   background-color: #eaf6f6;
