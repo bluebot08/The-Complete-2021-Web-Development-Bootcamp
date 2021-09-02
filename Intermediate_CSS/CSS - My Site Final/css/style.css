@@ -1,11 +1,12 @@
 body {
+  color: #40514e;
   margin: 0;
   text-align: center;
   font-family: "Kaisei Tokumin", serif;
 }
 h1 {
   color: #66bfbf;
-  font-family: "Allison", cursive;
+  font-family: "Caveat", cursive;
   font-size: 5.625rem;
   line-height: 2;
   margin: 50px auto 0 auto;
@@ -22,17 +23,22 @@ h3 {
 }
 a {
   color: #11999e;
+  font-family: "Kaisei HarunoUmi", serif;
+  text-decoration: none;
+}
+a:hover {
 }
 hr {
   border-style: dotted none none none;
   border-width: 10px;
   color: #eaf6f6;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 100px auto;
   width: 25%;
 }
 p {
-  color: #40514e;
+  line-height: 2;
+}
+.contact-me {
 }
 .copyrighttxt {
   color: #eaf6f6;
@@ -42,13 +48,23 @@ p {
   position: relative;
   padding-top: 100px;
 }
-
+.middle-container {
+  margin: 100px 0;
+}
 .bottom-container {
   background-color: #66bfbf;
   padding: 10px;
 }
 .pro {
   text-decoration: underline;
+}
+.textwidth30 {
+  margin: auto;
+  width: 30%;
+}
+.contact-message {
+  margin: 40px auto 60px;
+  width: 40%;
 }
 .top-cloud {
   position: absolute;
@@ -60,11 +76,10 @@ p {
   left: 300px;
   bottom: 300px;
 }
-.footer-link{
+.footer-link {
   margin: 0 10px 0 10px;
 }
 .skill-row {
-  line-height: 2;
   margin: 100px auto 100px auto;
   text-align: left;
   width: 50%;
@@ -93,7 +108,7 @@ p {
   -moz-border-radius: 20px;
   border-radius: 20px;
   color: #ffffff;
-  font-family: Open Sans;
+  font-family: "Kaisei HarunoUmi", serif;
   font-size: 16px;
   font-weight: 100;
   padding: 12px;
