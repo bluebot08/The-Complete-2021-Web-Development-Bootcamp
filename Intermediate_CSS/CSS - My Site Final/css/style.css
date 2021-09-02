@@ -60,7 +60,9 @@ p {
   left: 300px;
   bottom: 300px;
 }
-
+.footer-link{
+  margin: 0 10px 0 10px;
+}
 .skill-row {
   line-height: 2;
   margin: 100px auto 100px auto;
