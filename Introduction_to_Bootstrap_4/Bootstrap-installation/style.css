@@ -52,8 +52,9 @@ p {
   margin: 100px 0;
 }
 .mountainimg {
-  width: 100%;
-  max-width: 600px;
+  display: inline-block;
+  width: 75%;
+  max-width: 375px;
 }
 .bottom-container {
   background-color: #66bfbf;
