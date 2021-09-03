@@ -53,6 +53,7 @@ p {
   margin: 100px 0;
 }
 .mountainimg {
+  padding-top: 30px;
   max-width: 100%;
 }
 .bottom-container {
@@ -78,7 +79,7 @@ p {
 .bottom-cloud {
   position: absolute;
   right: 50px;
-  bottom: 200px;
+  bottom: 210px;
 }
 .footer-link {
   margin: 0 10px 0 10px;
