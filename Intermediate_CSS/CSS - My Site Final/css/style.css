@@ -3,7 +3,7 @@ body {
   margin: 0;
   text-align: center;
   font-family: "Kaisei Tokumin", serif;
-  width: 100%;
+  max-width: 100%;
 }
 h1 {
   color: #66bfbf;
@@ -52,7 +52,7 @@ p {
 .middle-container {
   margin: 100px 0;
 }
-.mountainimg{
+.mountainimg {
   max-width: 100%;
 }
 .bottom-container {
@@ -77,7 +77,7 @@ p {
 }
 .bottom-cloud {
   position: absolute;
-  left: 300px;
+  left: 200px;
   bottom: 300px;
 }
 .footer-link {
