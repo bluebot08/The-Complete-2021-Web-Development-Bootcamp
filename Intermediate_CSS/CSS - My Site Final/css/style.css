@@ -73,12 +73,12 @@ p {
 .top-cloud {
   position: absolute;
   top: 50px;
-  right: 300px;
+  left: 50px;
 }
 .bottom-cloud {
   position: absolute;
-  left: 200px;
-  bottom: 300px;
+  right: 50px;
+  bottom: 200px;
 }
 .footer-link {
   margin: 0 10px 0 10px;
