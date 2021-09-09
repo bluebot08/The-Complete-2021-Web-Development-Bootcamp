@@ -10,3 +10,6 @@ h1 {
 .container-fluid {
   padding: 3% 15%;
 }
+.iphone6 {
+  transform: rotate(20deg);
+}
