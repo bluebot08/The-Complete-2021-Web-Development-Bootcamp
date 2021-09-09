@@ -17,6 +17,13 @@ h1 {
 .iphone6 {
   transform: rotate(20deg);
 }
+
+/* Navigation Bar */
+.navbar-brand{
+  font-family: Ubuntu;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
 .titleimage {
   padding-top: 5%;
 }
