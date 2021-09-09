@@ -1,6 +1,9 @@
 #title {
   background-color: #ff4c68;
 }
+body {
+  font-family: "Montserrat", sans-serif;
+}
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
@@ -13,6 +16,6 @@ h1 {
 .iphone6 {
   transform: rotate(20deg);
 }
-.titleimage{
+.titleimage {
   padding-top: 5%;
 }
