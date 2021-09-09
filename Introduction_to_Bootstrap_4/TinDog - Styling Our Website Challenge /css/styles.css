@@ -13,3 +13,6 @@ h1 {
 .iphone6 {
   transform: rotate(20deg);
 }
+.titleimage{
+  padding-top: 5%;
+}
