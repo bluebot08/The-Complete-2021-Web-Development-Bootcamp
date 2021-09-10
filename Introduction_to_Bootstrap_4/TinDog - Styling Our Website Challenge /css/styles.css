@@ -20,7 +20,7 @@ h3 {
   font-weight: 900;
 }
 
-p{
+p {
   color: #8f8f8f;
 }
 
@@ -60,4 +60,10 @@ p{
 .title-image {
   transform: rotate(25deg);
   width: 60%;
+}
+
+/* Styling glyphs in features section */
+
+.features-glyph {
+  color: #ef8172;
 }
