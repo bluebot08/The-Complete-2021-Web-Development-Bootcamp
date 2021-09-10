@@ -64,6 +64,10 @@ p {
 
 /* Styling features section */
 
+#features{
+  padding: 7% 15%;
+}
+
 .features-glyph {
   color: #ef8172;
   font-size: 4rem;
