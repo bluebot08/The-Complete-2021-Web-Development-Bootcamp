@@ -70,6 +70,10 @@ p {
   margin-bottom: 15px;
 }
 
+.features-glyph:hover {
+  color: #ff4c68;
+}
+
 .featurestxt {
   text-align: center;
 }
