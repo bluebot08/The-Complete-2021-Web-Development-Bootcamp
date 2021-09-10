@@ -97,3 +97,15 @@ p {
   padding: 7% 15%;
   text-align: center;
 }
+
+.testimonial-image {
+  border-radius: 100%;
+  margin: 20px;
+  width: 10%;
+}
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+  text-align: center;
+}
