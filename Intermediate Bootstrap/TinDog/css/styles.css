@@ -118,6 +118,9 @@ p {
   width: 15%;
 }
 
-#pricing{
+/* Pricing Section */
+
+#pricing {
+  padding: 100px;
   text-align: center;
 }
