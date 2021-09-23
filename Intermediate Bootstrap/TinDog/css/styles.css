@@ -32,7 +32,7 @@ p {
 }
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 7%;
 }
 
 /* Navigation Bar */
@@ -67,12 +67,16 @@ p {
 .title-image {
   transform: rotate(25deg);
   width: 60%;
+  position: absolute;
+  right: 25%;
 }
 
 /* Styling features section */
 
 #features {
+  background-color: white;
   padding: 7% 15%;
+  position: relative;
 }
 
 .features-glyph {
