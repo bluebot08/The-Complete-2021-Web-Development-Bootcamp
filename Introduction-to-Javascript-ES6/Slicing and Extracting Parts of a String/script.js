@@ -19,3 +19,10 @@ alert(
     remainingCharacters +
     " characters left."
 );
+
+messageTrimmed = yourMessage.slice(0, 140);
+
+alert(
+  "Your message shortened to meet the 140 character limit is as follows: " +
+    messageTrimmed
+);
