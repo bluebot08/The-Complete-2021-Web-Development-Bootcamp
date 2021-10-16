@@ -13,7 +13,7 @@ function lifeInWeeks(age) {
     `You have ${daysRemaining} days, ${weeksRemaining} weeks, and ${monthsRemaining} months left.`
   );
   alert(
-    `You have ${daysRemaining} days, ${weeksRemaining} weeks, and ${monthsRemaining} months left.`
+    `You have ${daysRemaining} days, ${weeksRemaining} weeks, and ${monthsRemaining} months left in your life if you live until 90.`
   );
 
   /*************Don't change the code below**********/
