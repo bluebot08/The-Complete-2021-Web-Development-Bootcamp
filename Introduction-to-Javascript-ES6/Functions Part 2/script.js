@@ -1,4 +1,6 @@
-var money = prompt("How much money will you give the robot?");
+var money = prompt(
+  "How many dollars will you give the robot? One bottle of milk is $1.5."
+);
 var bottlesBought = Math.floor(money / 1.5);
 
 function getMilk(money) {
