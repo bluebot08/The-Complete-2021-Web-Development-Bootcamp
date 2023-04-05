@@ -19,7 +19,9 @@ function compatabilityGenerator() {
         finalScore +
         "%. Congrats on the match made in heaven!"
     );
-  } else {
+  }
+
+  if (finalScore > 30 && finalScore <= 70) {
     alert(
       firstPerson +
         " and " +
@@ -27,6 +29,17 @@ function compatabilityGenerator() {
         " have a compatability score of " +
         finalScore +
         "%. Maybe someone else would be better."
+    );
+  }
+
+  if (finalScore <= 30) {
+    alert(
+      firstPerson +
+        " and " +
+        secondPerson +
+        " have a compatability score of " +
+        finalScore +
+        "%. You go together like oil and water."
     );
   }
 }
