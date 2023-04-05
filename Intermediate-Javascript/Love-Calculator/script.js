@@ -9,14 +9,26 @@ function compatabilityGenerator() {
   let modifiedScore = baseScore * 100;
   let minScore = Math.floor(modifiedScore);
   let finalScore = minScore + 1;
-  alert(
-    firstPerson +
-      " and " +
-      secondPerson +
-      " have a compatability score of " +
-      finalScore +
-      "%"
-  );
+
+  if (finalScore > 70) {
+    alert(
+      firstPerson +
+        " and " +
+        secondPerson +
+        " have a compatability score of " +
+        finalScore +
+        "%. Congrats on the match made in heaven!"
+    );
+  } else {
+    alert(
+      firstPerson +
+        " and " +
+        secondPerson +
+        " have a compatability score of " +
+        finalScore +
+        "%. Maybe someone else would be better."
+    );
+  }
 }
 
 compatabilityGenerator();
