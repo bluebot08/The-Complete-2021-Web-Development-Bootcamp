@@ -25,3 +25,14 @@ function fibGen(n) {
   alert(sequence);
 }
 fibGen();
+
+// From Memory
+
+// function fGen(n){
+//   let fibSeq = [0,1]
+//   for (i = 2; i < n; i++) {
+//     nextNum = fibSeq[i-1] + fibSeq[i-2]
+//     fibSeq.push(nextNum);
+//   }
+//   return fibSeq
+// }
