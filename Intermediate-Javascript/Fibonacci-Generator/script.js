@@ -15,12 +15,13 @@
 // fibonacciGenerator(n);
 
 function fibGen(n) {
+  n = prompt("How many Fibonacci numbers would you like generated?");
+  n = parseInt(n);
   let sequence = [0, 1];
   for (let i = 2; i < n; i++) {
     let nextVal = sequence[i - 1] + sequence[i - 2];
     sequence.push(nextVal);
   }
-  return sequence;
+  alert(sequence);
 }
-
-console.log(fibGen(6));
+fibGen();
