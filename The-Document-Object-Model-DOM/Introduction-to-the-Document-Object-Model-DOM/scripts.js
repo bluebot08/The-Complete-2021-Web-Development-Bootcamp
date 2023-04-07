@@ -1,1 +1,3 @@
 document.querySelectorAll(".list")[2].innerHTML = "Stefan O'Neil";
+
+document.querySelector(".list a").style.color = "red";
