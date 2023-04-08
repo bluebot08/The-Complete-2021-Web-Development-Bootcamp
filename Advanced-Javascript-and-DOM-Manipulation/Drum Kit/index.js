@@ -54,8 +54,7 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
         break;
 
       default:
-        console.log(this.innerHTML);
-        break;
+        console.log(buttonInnerHTML);
     }
   });
 }
