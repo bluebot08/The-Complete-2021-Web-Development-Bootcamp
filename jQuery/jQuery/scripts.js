@@ -7,3 +7,7 @@ $("h1").text("Good Bye!");
 $("button").html("<em>Don't Click Me!</em>");
 
 $("a").attr("href", "https://www.yahoo.com");
+
+$("h1").click(function () {
+  $("h1").css("color", "purple");
+});
