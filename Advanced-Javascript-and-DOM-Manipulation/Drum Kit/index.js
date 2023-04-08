@@ -58,3 +58,7 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
     }
   });
 }
+
+document.addEventListener("keydown", function () {
+  alert("Key was pressed");
+});
