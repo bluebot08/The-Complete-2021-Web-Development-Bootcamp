@@ -5,3 +5,5 @@ $("h1").text("Good Bye!");
 
 // $("button").text("Don't Click Me!");
 $("button").html("<em>Don't Click Me!</em>");
+
+$("a").attr("href", "https://www.yahoo.com");
