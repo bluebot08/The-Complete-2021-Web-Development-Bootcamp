@@ -37,3 +37,9 @@ $("body").keydown(function (event) {
 $("h1").on("mouseover", function () {
   $("h1").css("color", "blue");
 });
+
+$("h1").after("<h2>Mouse over me to get rid of all these buttons!</h2>");
+
+$("h2").on("mouseover", function () {
+  $("button").remove();
+});
