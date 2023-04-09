@@ -27,14 +27,13 @@ function nextSequence() {
 
   //   create audio and play
 
-  //   var audio = new Audio("sounds/" + randomChosenColor + ".mp3");
-  //   audio.play();
-
-  //   Detect when any of the buttons are clicked and trigger a handler function
-  $("button").click(function () {
-    let userChosenColor = this.id;
-    console.log(userChosenColor);
-  });
+  var audio = new Audio("sounds/" + randomChosenColor + ".mp3");
+  audio.play();
 }
 
-nextSequence();
+//   Detect when any of the buttons are clicked and trigger a handler function
+$(".btn").click(function () {
+  let userChosenColor = $(this).attr("id");
+  userClickedPattern.push(userChosenColor);
+  console.log(userClickedPattern);
+});
