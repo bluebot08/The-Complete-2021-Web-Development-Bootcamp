@@ -4,6 +4,7 @@
 
 let buttonColors = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
+let userClickedPattern = [];
 
 function nextSequence() {
   // Generate random number
