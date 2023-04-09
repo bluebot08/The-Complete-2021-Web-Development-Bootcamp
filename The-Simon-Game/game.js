@@ -1,5 +1,7 @@
 // alert("This is a test");
 
+let level = 0;
+
 // Create arrays
 
 let buttonColors = ["red", "blue", "green", "yellow"];
@@ -62,10 +64,6 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-let gameStart = false;
-
 $(document).one("keydown", function () {
   nextSequence();
 });
-
-let level = 0;
