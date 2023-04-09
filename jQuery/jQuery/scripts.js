@@ -19,3 +19,21 @@ $("h1").click(function () {
 //     document.querySelector("h1").style.color = "purple";
 //   });
 // }
+
+// jQuery way
+
+$("button").click(function () {
+  $("h1").css("color", "purple");
+});
+
+$("input").keydown(function (event) {
+  console.log(event.key);
+});
+
+$("body").keydown(function (event) {
+  $("h1").text(event.key);
+});
+
+$("h1").on("mouseover", function () {
+  $("h1").css("color", "blue");
+});
