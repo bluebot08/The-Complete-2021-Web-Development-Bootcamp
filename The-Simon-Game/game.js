@@ -16,19 +16,18 @@ function nextSequence() {
   console.log(randomNumber);
   console.log(randomChosenColor);
 
-  //   flashing button animation My soution
+  //   My soution
+  //   flashing button animation
   //   let selectedButton = $("." + randomChosenColor);
   //   $(selectedButton).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
   //   console.log(selectedButton);
+
   $("#" + randomChosenColor)
     .fadeIn(100)
     .fadeOut(100)
     .fadeIn(100);
 
-  //   create audio and play
-
-  var audio = new Audio("sounds/" + randomChosenColor + ".mp3");
-  audio.play();
+  playSound(userChosenColor);
 }
 
 //   Detect when any of the buttons are clicked and trigger a handler function
@@ -36,4 +35,13 @@ $(".btn").click(function () {
   let userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
   console.log(userClickedPattern);
+
+  playSound(userChosenColor);
 });
+
+function playSound(name) {
+  //   create audio and play
+
+  var audio = new Audio("sounds/" + name + ".mp3");
+  audio.play();
+}
