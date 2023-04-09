@@ -43,3 +43,19 @@ $("h1").after("<h2>Mouse over me to get rid of all these buttons!</h2>");
 $("h2").on("mouseover", function () {
   $("button").remove();
 });
+
+$("h1").before("<button class = remove >Click Me To Hide or Show h1!</button>");
+
+// $(".remove").on("click", function () {
+//   $("h1").hide();
+// });
+
+$(".remove").on("click", function () {
+  $("h1").fadeToggle();
+});
+
+$(".remove").after("<button class = slide >Click Me to Slide</button>");
+
+$(".slide").on("click", function () {
+  $("h1").slideUp().slideDown().animate({ opacity: 0.5 });
+});
