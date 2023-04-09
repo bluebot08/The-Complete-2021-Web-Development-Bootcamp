@@ -45,6 +45,8 @@ $(".btn").click(function () {
   playSound(userChosenColor);
 
   animatePress(userChosenColor);
+
+  checkAnswer([userClickedPattern]);
 });
 
 function playSound(name) {
@@ -64,6 +66,14 @@ function animatePress(currentColor) {
   }, 100);
 }
 
+// Game start
+
 $(document).one("keydown", function () {
   nextSequence();
 });
+
+function checkAnswer(currentLevel) {
+  if (condition) {
+  } else {
+  }
+}
