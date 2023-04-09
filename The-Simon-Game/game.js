@@ -73,7 +73,9 @@ $(document).one("keydown", function () {
 });
 
 function checkAnswer(currentLevel) {
-  if (condition) {
+  if (currentLevel === gamePattern) {
+    console.log("success");
   } else {
+    console.log("Wrong");
   }
 }
