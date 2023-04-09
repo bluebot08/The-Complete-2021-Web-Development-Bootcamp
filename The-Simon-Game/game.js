@@ -27,7 +27,7 @@ function nextSequence() {
     .fadeOut(100)
     .fadeIn(100);
 
-  playSound(userChosenColor);
+  playSound(randomChosenColor);
 }
 
 //   Detect when any of the buttons are clicked and trigger a handler function
@@ -57,3 +57,11 @@ function animatePress(currentColor) {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
 }
+
+let gameStart = false;
+
+$(document).one("keydown", function () {
+  nextSequence();
+});
+
+let level = 0;
