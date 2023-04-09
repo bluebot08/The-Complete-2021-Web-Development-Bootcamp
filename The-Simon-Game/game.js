@@ -7,6 +7,10 @@ let gamePattern = [];
 let userClickedPattern = [];
 
 function nextSequence() {
+  // Changing information
+  level = level + 1;
+  $("h1").text("Level " + level);
+
   // Generate random number
   let randomNumber = Math.floor(Math.random() * 4);
 
