@@ -25,17 +25,33 @@ app.get("/", function (req, res) {
       const feelsLikeTemp = weatherData.main.feels_like;
       const descriptionSky = weatherData.weather[0].description;
       const description = weatherData.weather[0].main;
-      res.send(
-        "The temperature in Miura is " +
-          temp +
-          " degrees Celcius. The feels like temperature is " +
-          feelsLikeTemp +
-          ". The weather condtions are " +
+      res.write(
+        "<p>The weather is currently " +
           description +
           " with " +
           descriptionSky +
-          " ."
+          " </p>"
       );
+      res.write(
+        "<h1>The temperature in Miura is " +
+          temp +
+          " and feels like " +
+          feelsLikeTemp +
+          " degrees Celcius</h1>"
+      );
+      res.send;
+      //   My way
+      //   res.send(
+      //     "<h1>The temperature in Miura is " +
+      //       temp +
+      //       " degrees Celcius. The feels like temperature is " +
+      //       feelsLikeTemp +
+      //       ". The weather is currently " +
+      //       description +
+      //       " with " +
+      //       descriptionSky +
+      //       " .</h1>"
+      //   );
     });
   });
   // Need to remove because we can only have one res
