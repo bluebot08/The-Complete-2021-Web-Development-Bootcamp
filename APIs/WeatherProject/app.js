@@ -1,3 +1,4 @@
+const { log } = require("console");
 const express = require("express");
 
 const https = require("https");
@@ -11,7 +12,11 @@ app.get("/", function (req, res) {
     "https://api.openweathermap.org/data/2.5/weather?q=Miura&appid=5ed0351a230c2fc8207ce933d27fd7be&units=metric";
 
   https.get(url, function (response) {
-    console.log(response);
+    console.log(response.statusCode);
+
+    response.on("data", function (data) {
+      console.log(data);
+    });
   });
 
   res.send("Server is up and running");
