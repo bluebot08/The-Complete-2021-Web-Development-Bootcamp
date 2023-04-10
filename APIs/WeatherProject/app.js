@@ -23,11 +23,23 @@ app.get("/", function (req, res) {
       //   Saving specific data
       const temp = weatherData.main.temp;
       const feelsLikeTemp = weatherData.main.feels_like;
-      const description = weatherData.weather[0].description;
+      const descriptionSky = weatherData.weather[0].description;
+      const description = weatherData.weather[0].main;
+      res.send(
+        "The temperature in Miura is " +
+          temp +
+          " degrees Celcius. The feels like temperature is " +
+          feelsLikeTemp +
+          ". The weather condtions are " +
+          description +
+          " with " +
+          descriptionSky +
+          " ."
+      );
     });
   });
-
-  res.send("Server is up and running");
+  // Need to remove because we can only have one res
+  //   res.send("Server is up and running");
 });
 
 app.listen(3000, function () {
