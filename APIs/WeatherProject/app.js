@@ -25,6 +25,9 @@ app.get("/", function (req, res) {
       const feelsLikeTemp = weatherData.main.feels_like;
       const descriptionSky = weatherData.weather[0].description;
       const description = weatherData.weather[0].main;
+      const icon = weatherData.weather[0].icon;
+
+      //   Responding
       res.write(
         "<p>The weather is currently " +
           description +
@@ -40,7 +43,8 @@ app.get("/", function (req, res) {
           " degrees Celcius</h1>"
       );
       res.send;
-      //   My way
+
+      //   My original way
       //   res.send(
       //     "<h1>The temperature in Miura is " +
       //       temp +
