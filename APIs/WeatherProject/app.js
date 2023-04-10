@@ -8,8 +8,16 @@ const https = require("https");
 const app = express();
 
 app.get("/", function (req, res) {
+  const query = "Tokyo";
+  const apiKey = "5ed0351a230c2fc8207ce933d27fd7be";
+  const unit = "metric";
   const url =
-    "https://api.openweathermap.org/data/2.5/weather?q=Miura&appid=5ed0351a230c2fc8207ce933d27fd7be&units=metric";
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    query +
+    "&appid=" +
+    apiKey +
+    "&units=" +
+    unit;
 
   https.get(url, function (response) {
     // logging response code to see if it things are working
