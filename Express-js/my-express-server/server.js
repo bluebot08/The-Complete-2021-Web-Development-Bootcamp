@@ -26,7 +26,7 @@ app.get("/about", function (req, res) {
   );
 });
 
-applget("/hobbies", function (req, res) {
+app.get("/hobbies", function (req, res) {
   res.send("I love movies!");
 });
 
