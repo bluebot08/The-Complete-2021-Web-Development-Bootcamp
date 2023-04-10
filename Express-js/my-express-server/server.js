@@ -13,7 +13,7 @@ const app = express();
 app.get("/", function (req, res) {
   //   console.log(request);
   //   response.send("Hello");
-  response.send("<h1>Hello, World!</h1>");
+  res.send("<h1>Hello, World!</h1>");
 });
 
 app.listen(3000, function () {
