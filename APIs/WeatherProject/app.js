@@ -12,10 +12,18 @@ app.get("/", function (req, res) {
     "https://api.openweathermap.org/data/2.5/weather?q=Miura&appid=5ed0351a230c2fc8207ce933d27fd7be&units=metric";
 
   https.get(url, function (response) {
+    // logging response code to see if it things are working
     console.log(response.statusCode);
 
+    // saving the data
     response.on("data", function (data) {
-      console.log(data);
+      const weatherData = JSON.parse(data);
+      console.log(weatherData);
+
+      //   Saving specific data
+      const temp = weatherData.main.temp;
+      const feelsLikeTemp = weatherData.main.feels_like;
+      const description = weatherData.weather[0].description;
     });
   });
 
