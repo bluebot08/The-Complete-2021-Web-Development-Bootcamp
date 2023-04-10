@@ -7,7 +7,5 @@ app.listen(3000, function () {
 });
 
 app.get("/", function (req, res) {
-  res.send(
-    "<h1>Hello, World! This is the home of the calculator web app!</h1>"
-  );
+  res.sendFile(__dirname + "/index.html");
 });
