@@ -27,7 +27,7 @@ app.get("/about", function (req, res) {
 });
 
 app.get("/hobbies", function (req, res) {
-  res.send("I love movies!");
+  res.send("I love movies and Star Wars!");
 });
 
 app.listen(3000, function () {
