@@ -8,6 +8,10 @@ const https = require("https");
 
 const app = express();
 
+// Set express to serve static pages and images
+
+app.use(express.static("public"));
+
 // initialze body-parser
 
 app.use(bodyParser.urlencoded({ extended: true }));
