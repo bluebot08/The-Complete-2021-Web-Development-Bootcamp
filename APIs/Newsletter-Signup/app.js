@@ -29,7 +29,11 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  console.log(req.body.firstName);
-  console.log(req.body.lastName);
-  console.log(req.body.email);
+  let firstName = req.body.fName;
+  let lastName = req.body.lName;
+  let email = req.body.userEmail;
+
+  console.log(firstName);
+  console.log(lastName);
+  console.log(email);
 });
