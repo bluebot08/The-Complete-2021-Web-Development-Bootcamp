@@ -3,6 +3,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
+const client = require("@mailchimp/mailchimp_marketing");
+client.setConfig({
+  apiKey: "cb91801d82758f01a1eea04122208d87-us21",
+  server: "us21",
+});
 
 // initialze express
 
@@ -38,6 +43,11 @@ app.post("/", function (req, res) {
   //   console.log(email);
 
   //Javascript Object
+  const subscribingUser = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+  };
 
   const data = {
     members: [
@@ -50,6 +60,18 @@ app.post("/", function (req, res) {
         },
       },
     ],
+  };
+
+  const run = async () => {
+    const response = await client.lists.addListMember("c122ac13e9", {
+      email_address: subscribingUser.email,
+      status: "subscribed",
+      merge_fields: {
+        FNAME: subscribingUser.firstName,
+        LNAME: subscribingUser.lastName,
+      },
+    });
+    console.log(response); // (optional)
   };
   //Converting object into JSON
 
@@ -69,6 +91,7 @@ app.post("/", function (req, res) {
   });
   request.write(jsonData);
   request.end;
+  run();
 });
 
 // MailChimp API Key
