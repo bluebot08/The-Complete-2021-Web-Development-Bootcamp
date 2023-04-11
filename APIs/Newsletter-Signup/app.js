@@ -37,6 +37,8 @@ app.post("/", function (req, res) {
   console.log(lastName);
   console.log(email);
 
+  //Javascript Object
+
   const data = {
     members: [
       {
@@ -49,7 +51,13 @@ app.post("/", function (req, res) {
       },
     ],
   };
+  //Converting object into JSON
+
   const jsonData = JSON.stringify(data);
+
+  const url = "https://usX.api.mailchimp.com/3.0/lists";
+
+  https.request(url, options, function (response) {});
 });
 
 // MailChimp API Key
