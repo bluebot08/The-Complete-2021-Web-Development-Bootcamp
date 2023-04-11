@@ -29,13 +29,27 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  let firstName = req.body.fName;
-  let lastName = req.body.lName;
-  let email = req.body.userEmail;
+  const firstName = req.body.fName;
+  const lastName = req.body.lName;
+  const email = req.body.userEmail;
 
   console.log(firstName);
   console.log(lastName);
   console.log(email);
+
+  const data = {
+    members: [
+      {
+        email_adress: email,
+        status: "subscribed",
+        merge_fields: {
+          FNAME: firstName,
+          LNAME: lastName,
+        },
+      },
+    ],
+  };
+  const jsonData = JSON.stringify(data);
 });
 
 // MailChimp API Key
