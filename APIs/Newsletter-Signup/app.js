@@ -27,3 +27,9 @@ app.listen(3000, function () {
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/signup.html");
 });
+
+app.post("/", function (req, res) {
+  console.log(req.body.firstName);
+  console.log(req.body.lastName);
+  console.log(req.body.email);
+});
