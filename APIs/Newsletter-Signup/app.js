@@ -37,3 +37,7 @@ app.post("/", function (req, res) {
   console.log(lastName);
   console.log(email);
 });
+
+// MailChimp API Key
+
+// 9577d0b0fdfbcd75459a39c938862061-us21
