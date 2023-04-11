@@ -10,7 +10,7 @@ const app = express();
 
 // Set express to serve static pages and images
 
-app.use(express.static("public"));
+app.use("/public", express.static("public"));
 
 // initialze body-parser
 
