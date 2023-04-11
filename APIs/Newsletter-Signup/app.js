@@ -33,9 +33,9 @@ app.post("/", function (req, res) {
   const lastName = req.body.lName;
   const email = req.body.userEmail;
 
-  console.log(firstName);
-  console.log(lastName);
-  console.log(email);
+  //   console.log(firstName);
+  //   console.log(lastName);
+  //   console.log(email);
 
   //Javascript Object
 
@@ -55,14 +55,25 @@ app.post("/", function (req, res) {
 
   const jsonData = JSON.stringify(data);
 
-  const url = "https://usX.api.mailchimp.com/3.0/lists";
+  const url = "https://us21.api.mailchimp.com/3.0/lists/c122ac13e9";
 
-  https.request(url, options, function (response) {});
+  const options = {
+    method: "POST",
+    auth: "Stefan08:cb91801d82758f01a1eea04122208d87-us21",
+  };
+
+  const request = https.request(url, options, function (response) {
+    response.on("data", function (data) {
+      console.log(JSON.parse(data));
+    });
+  });
+  request.write(jsonData);
+  request.end;
 });
 
 // MailChimp API Key
 
-// 9577d0b0fdfbcd75459a39c938862061-us21
+// cb91801d82758f01a1eea04122208d87-us21
 
 // List ID
 
