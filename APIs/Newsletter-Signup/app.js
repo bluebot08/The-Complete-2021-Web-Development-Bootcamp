@@ -41,3 +41,7 @@ app.post("/", function (req, res) {
 // MailChimp API Key
 
 // 9577d0b0fdfbcd75459a39c938862061-us21
+
+// List ID
+
+// c122ac13e9
