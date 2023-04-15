@@ -1,58 +1,35 @@
-// Install Modules
+// *** Constant Require Section:
 
 const express = require("express");
+const request = require("request");
 const bodyParser = require("body-parser");
 const https = require("https");
-const client = require("@mailchimp/mailchimp_marketing");
-client.setConfig({
-  apiKey: "cb91801d82758f01a1eea04122208d87-us21",
-  server: "us21",
-});
-
-// initialze express
 
 const app = express();
 
-// Set express to serve static pages and images
-
-app.use("/public", express.static("public"));
-
-// initialze body-parser
-
+// *** Body Parser ***
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Set express to listen to port 3000 with message
+// *** Static Folder ***
+app.use("/public", express.static("public"));
+// app.use("/public", express.static(path.join(__dirname, "public")));
 
-app.listen(3000, function () {
-  console.log("Server is running on port 3000.");
-});
-
-// Functions
-
+// *** Tracking HTML File ***
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/signup.html");
 });
 
+// *** Signup Route ***
 app.post("/", function (req, res) {
   const firstName = req.body.fName;
   const lastName = req.body.lName;
   const email = req.body.userEmail;
 
-  //   console.log(firstName);
-  //   console.log(lastName);
-  //   console.log(email);
-
-  //Javascript Object
-  const subscribingUser = {
-    firstName: firstName,
-    lastName: lastName,
-    email: email,
-  };
-
+  // *** Construct Requesting data ***
   const data = {
     members: [
       {
-        email_adress: email,
+        email_address: email,
         status: "subscribed",
         merge_fields: {
           FNAME: firstName,
@@ -62,44 +39,52 @@ app.post("/", function (req, res) {
     ],
   };
 
-  const run = async () => {
-    const response = await client.lists.addListMember("c122ac13e9", {
-      email_address: subscribingUser.email,
-      status: "subscribed",
-      merge_fields: {
-        FNAME: subscribingUser.firstName,
-        LNAME: subscribingUser.lastName,
-      },
-    });
-    console.log(response); // (optional)
-  };
-  //Converting object into JSON
-
+  // *** Stringify inputed data ***
   const jsonData = JSON.stringify(data);
 
+  // *** url = "https://<data center>.api.mailchimp.com/3.0/lists/{listID}";
   const url = "https://us21.api.mailchimp.com/3.0/lists/c122ac13e9";
 
   const options = {
     method: "POST",
-    auth: "Stefan08:cb91801d82758f01a1eea04122208d87-us21",
+    auth: "Stefan:cb91801d82758f01a1eea04122208d87-us21",
   };
 
+  // *** Requesting and send back our data to mailchimp ***
   const request = https.request(url, options, function (response) {
-    if (response.status === 200) {
-      res.send("Successfully subscribed!");
+    // *** Checking our code statment ***
+    if (response.statusCode === 200) {
+      res.sendFile(__dirname + "/success.html");
     } else {
-      res.send("There was an error with signing up, please try again!");
+      res.sendFile(__dirname + "/failure.html");
     }
 
     response.on("data", function (data) {
       console.log(JSON.parse(data));
     });
   });
+
+  // *** Showing the status code on hyper terminal ***
   request.write(jsonData);
-  request.end;
-  run();
+  // *** Ending Code ***
+  request.end();
 });
 
+// *** Redirecting Codes: ***
+
+// *** from Failure page to Signup page ***
+app.post("/failure", function (req, res) {
+  res.redirect("/");
+});
+// *** from Success page to Signup page ***
+app.post("/success", function (req, res) {
+  res.redirect("/");
+});
+
+// *** Our Server PORT Starter ***
+app.listen(3000, function () {
+  console.log("Server started on port: 3000!");
+});
 // MailChimp API Key
 
 // cb91801d82758f01a1eea04122208d87-us21
@@ -107,3 +92,7 @@ app.post("/", function (req, res) {
 // List ID
 
 // c122ac13e9
+
+// // Set express to serve static pages and images
+
+// app.use("/public", express.static("public"));
