@@ -4,6 +4,9 @@ const express = require("express");
 // const request = require("request");
 const bodyParser = require("body-parser");
 const https = require("https");
+require("dotenv").config();
+
+const apiKey = process.env.API_KEY;
 
 const app = express();
 
@@ -47,7 +50,7 @@ app.post("/", function (req, res) {
 
   const options = {
     method: "POST",
-    auth: "Stefan:cb91801d82758f01a1eea04122208d87-us21",
+    auth: "Stefan:" + apiKey,
   };
 
   // *** Requesting and send back our data to mailchimp ***
@@ -85,9 +88,6 @@ app.post("/success", function (req, res) {
 app.listen(3000, function () {
   console.log("Server started on port: 3000!");
 });
-// MailChimp API Key
-
-// cb91801d82758f01a1eea04122208d87-us21
 
 // List ID
 
